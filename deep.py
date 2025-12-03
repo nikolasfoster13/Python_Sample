@@ -5,6 +5,6 @@ if answer == 42:
 elif answer.lower() == "fourty-two":
     print("Yes")
 elif answer.lower() == "fourty two":
-
+    print("Yes")
 else:
     print("No")
