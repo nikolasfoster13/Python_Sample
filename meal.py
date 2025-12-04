@@ -19,7 +19,11 @@ def main():
 
 def convert(tod):
     # Splits am/pm from time is user provided
-    time, am_pm = tod.strip().split(" ")
+    if tod.endswith("am") or tod.endswith("pm"):
+        time, am_pm = tod.strip().split(" ")
+    else:
+        time = tod.strip
+        am_pm = " "
 
     # If user provides between 12:00 am - 12:59 am, return hours as 0
     if am_pm == "am" and time.startswith("12"):
