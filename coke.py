@@ -16,7 +16,7 @@ while True:
 
     else:
         # If invalid, reprompt for coin
-        coin = int(input("Invalid coin. Insert Coin: "))
+        coin = int(input("Insert Coin: "))
         inserted += coin
 
     if inserted < 50:
