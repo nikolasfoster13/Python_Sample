@@ -16,7 +16,7 @@ while True:
 
     else:
         # If invalid, reprompt for coin
-        print(f"Amound Due: 50")
+        print(f"Amount Due: 50")
         coin = int(input("Insert Coin: "))
         inserted += coin
 
