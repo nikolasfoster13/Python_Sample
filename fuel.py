@@ -6,7 +6,7 @@ def main():
             # Split string on division
             num_list = prompt.split("/")
             # Convert numerator & denomeator into int and div to get decimal
-            decimal = int(num_list[0])/int(num_list[1])
+            decimal = round(int(num_list[0])/int(num_list[1]),2)
             # Multiply decimal by 100 and add % to form percent
             percent = str(int(decimal*100))+"%"
             if int(num_list[0]) < 0 or int(num_list[0]) > int(num_list[1]):
