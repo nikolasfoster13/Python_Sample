@@ -19,10 +19,10 @@ def main():
             pass
         else:
             # If 100%, return "F"
-            if percent == "100%":
+            if int(num_list[0])/int(num_list[1]) >= 0.99:
                 print("F")
             # If 0%, return "E"
-            elif percent == "0%":
+            elif int(num_list[0])/int(num_list[1]) <= .01:
                 print("E")
             # Other percentages, return
             else:
