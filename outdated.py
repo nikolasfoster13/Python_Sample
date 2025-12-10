@@ -14,8 +14,9 @@ months = {"January":"01",
 while True:
     user = input("Date: ")
     alpha_check = user.split(" ")
+    comma_check = user.split(",")
     num_check = user.split("/")
-    if alpha_check[0].isalpha() == True and alpha_check[0] in months and int(alpha_check[1].rstrip(",")) <= 31:
+    if alpha_check[0].isalpha() == True and count(comma_check) = 2 and alpha_check[0] in months and int(alpha_check[1].rstrip(",")) <= 31:
         year = alpha_check[2]
         month = months[alpha_check[0]]
         day= alpha_check[1].rstrip(",").rjust(2,"0")
