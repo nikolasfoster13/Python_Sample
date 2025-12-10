@@ -17,12 +17,10 @@ while True:
     user = input("Date: ").strip()
     # Splits input on space
     alpha_check = user.split(" ")
-    # Splits input on comma
-    comma_check = user.split(",")
     # Splits input on slash
     num_check = user.split("/")
     # Checks that if split on space, first str is alpha, the first str is a month, the input is comma separated after day, and the second str is a day <= 31
-    if alpha_check[0].isalpha() == True and alpha_check[0] in months and comma_check.count() < 2 and int(alpha_check[1].rstrip(",")) <= 31:
+    if alpha_check[0].isalpha() == True and alpha_check[0] in months and "," in user == True and int(alpha_check[1].rstrip(",")) <= 31:
         # Assigns the third str to year
         year = alpha_check[2]
         # Assigns the first str to month from dict
