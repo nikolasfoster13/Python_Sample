@@ -20,6 +20,7 @@ while True:
         month = months[alpha_check[0]]
         day= alpha_check[1].rstrip(",").rjust(2,"0")
         print(f"{year}-{month}-{day}")
+        break
     elif num_check[0].isnumeric() == True and int(num_check[0]) <= 12 and int(num_check[1]) <= 31:
         year = num_check[2]
         month = num_check[0].rjust(2,"0")
