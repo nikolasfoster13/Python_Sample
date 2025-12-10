@@ -12,7 +12,7 @@ months = {"January":"01",
     "December":"12"}
 
 while True:
-    user = input("Date: ")
+    user = input("Date: ").strip()
     alpha_check = user.split(" ")
     comma_check = user.split(",")
     num_check = user.split("/")
