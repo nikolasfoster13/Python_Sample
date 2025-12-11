@@ -1,7 +1,6 @@
 from pyfiglet import Figlet
-from sys import argv
+from sys import argv, exit
 from random import choice
-from sys import exit
 
 # If user runs program w/o declaring font
 if len(argv) == 1:
