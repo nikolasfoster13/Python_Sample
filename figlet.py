@@ -13,7 +13,7 @@ if len(argv) == 1:
     print("Output: \n",figlet.renderText(user))
 
 # If user declares font and provides a valid font
-elif len(argv) == 3 and argv[1] == "-f" or "--font" and argv[2] in Figlet().getFonts():
+elif (len(argv) == 3) and (argv[1] == "-f" or "--font") and (argv[2] in Figlet().getFonts()):
     figlet = Figlet()
     figlet.setFont(font=argv[2])
     # Prompt for input
@@ -23,6 +23,7 @@ elif len(argv) == 3 and argv[1] == "-f" or "--font" and argv[2] in Figlet().getF
 
 # Else, exit program
 else:
+    print("Invalid usage")
     exit
 
 
