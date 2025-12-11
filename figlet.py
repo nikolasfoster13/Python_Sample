@@ -23,7 +23,7 @@ elif (len(sys.argv) == 3) and (sys.argv[1] == "-f" or sys.argv[1] == "--font") a
 
 # Else, exit program
 else:
-    sys.exit
-    print("Invalid usage")
+    sys.exit("Invalid usage")
+
 
 
