@@ -23,6 +23,7 @@ elif (len(argv) == 3) and (argv[1] == "-f" or "--font") and (argv[2] in Figlet()
 
 # Else, exit program
 else:
+    print("Invalid usage")
     sys.exit
 
 
