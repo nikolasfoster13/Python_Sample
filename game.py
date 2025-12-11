@@ -1,4 +1,4 @@
-from random import randint, randrange
+from random import randint
 while True:
     try:
         level = int(input("Level: "))
