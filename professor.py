@@ -92,16 +92,16 @@ def generate_integer(level):
         try:
             # If level input = 1, generate 2 random variables between 0-9
             if level == 1:
-                x = randint(0,10)
+                x = randint(0,9)
 
                 break
             # If level input = 2, generate 2 random variables between 10-99
             elif level == 2:
-                x = randint(10,100)
+                x = randint(10,99)
                 break
             # If level input = 3, generate 2 random variables between 100-999
             elif level == 3:
-                x = randint(100,1000)
+                x = randint(100,999)
                 break
             else:
                 raise ValueError
