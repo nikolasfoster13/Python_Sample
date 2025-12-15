@@ -81,18 +81,21 @@ def generate_integer(level):
         try:
             # If level input = 1, generate 2 random variables between 0-9
             if level == 1:
-                x = randint(0,9)
-                y = randint(0,9)
+                var = [randrange(0,9) for _ in range(2)]
+                x = var[0]
+                y = var[1]
                 break
             # If level input = 2, generate 2 random variables between 10-99
             elif level == 2:
-                x = randint(10,99)
-                y = randint(10,99)
+                var = [randrange(10,99) for _ in range(2)]
+                x = var[0]
+                y = var[1]
                 break
             # If level input = 3, generate 2 random variables between 100-999
             elif level == 3:
-                x = randint(100,999)
-                y = randint(100,999)
+                var = [randrange(100,999) for _ in range(2)]
+                x = var[0]
+                y = var[1]
                 break
             else:
                 raise ValueError
