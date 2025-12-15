@@ -12,11 +12,11 @@ def main():
     # Run loop 10 times
     while question <= 10:
         # Generate integers
-        x,y = generate_integer(level)
+        var = generate_integer(level)
         while True:
             try:
                 # If user answer = the answer
-                if int(input(f"{x} + {y} = ")) == (x + y):
+                if int(input(f"{var[0]} + {var[1]} = ")) == (var[0] + var[1]):
                     # Reset incorrect answer count to 0
                     i = 0
                     # Add 1 to user score
@@ -37,7 +37,7 @@ def main():
                         # Reset incorrect answer count to 0
                         i = 0
                         # Provide user with correct answer
-                        print(f"{x} + {y} = {x+y}")
+                        print(f"{var[0]} + {var[1]} = {var[0]+var[1]}")
                         break
                     else:
                         pass
@@ -54,7 +54,7 @@ def main():
                     # Reset incorrect answer count to 0
                     i = 0
                     # Provide user with correct answer
-                    print(f"{x} + {y} = {x+y}")
+                    print(f"{var[0]} + {var[1]} = {var[0]+var[1]}")
                     break
                 else:
                     pass
@@ -82,26 +82,20 @@ def generate_integer(level):
             # If level input = 1, generate 2 random variables between 0-9
             if level == 1:
                 var = [randrange(0,9) for _ in range(2)]
-                x = var[0]
-                y = var[1]
                 break
             # If level input = 2, generate 2 random variables between 10-99
             elif level == 2:
                 var = [randrange(10,99) for _ in range(2)]
-                x = var[0]
-                y = var[1]
                 break
             # If level input = 3, generate 2 random variables between 100-999
             elif level == 3:
                 var = [randrange(100,999) for _ in range(2)]
-                x = var[0]
-                y = var[1]
                 break
             else:
                 raise ValueError
         except ValueError:
             pass
-    return x,y
+    return var
 
 if __name__ == "__main__":
     main()
