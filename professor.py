@@ -3,62 +3,72 @@ from random import randrange
 def main():
     # Generate level
     level = get_level()
-    # Set question counter to 1
-    question = 1
+    # Set list questions
+    questions = []
+    # Add 10 random questions to list questions
+    for _ in range(10):
+        var = generate_integer(level)
+        questions.append(f"{var[0]} + {var[1]} = ")
+    # Set counter to 0
+    _ = 0
+    # Set incorrect counter to 0
+    i = 0
     # Set score to 0
     score = 0
-    # Set incorrect answer count to 0
-    i = 0
-    # Run loop 10 times
-    while question <= 10:
-        # Generate integers
-        var = generate_integer(level)
-        while True:
-            try:
-                # If user answer = the answer
-                if int(input(f"{var[0]} + {var[1]} = ")) == (var[0] + var[1]):
-                    # Reset incorrect answer count to 0
-                    i = 0
-                    # Add 1 to user score
-                    score = score + 1
-                    # Add 1 to the question counter
-                    question = question + 1
-                    break
-                # If user answer != the answer
-                else:
-                    # Print error
-                    print("EEE")
-                    # Add 1 to the incorrect question count
-                    i = i + 1
-                    # If user answers incorrectly 3 times
-                    if i == 3:
-                        # Add 1 to the question counter
-                        question = question + 1
-                        # Reset incorrect answer count to 0
-                        i = 0
-                        # Provide user with correct answer
-                        print(f"{var[0]} + {var[1]} = {var[0]+var[1]}")
-                        break
-                    else:
-                        pass
-            # If user provides non-numeric answer
-            except ValueError:
+    # Loop 10 times for all 10 questions
+    while _ <= 9:
+        try:
+            # Split question on +
+            q = (questions[_]).split("+")
+            # X = first int on split
+            x = int(q[0])
+            # Split remaining str on =
+            y_var = (q[1]).split("=")
+            # y = first int on split
+            y = int(y_var[0])
+            # Prompt user for answer
+            answer = int(input(questions[_]))
+            # If user answer = answer
+            if answer == x+y:
+                # Reset incorrect answer cnt
+                i = 0
+                # Add 1 to score
+                score = score + 1
+                # Add 1 to counter
+                _ = _ + 1
+            # If user provides incorrect answer
+            else:
                 # Print error
                 print("EEE")
-                # Add 1 to the incorrect question count
+                # Add 1 to incorrect counter
                 i = i + 1
-                # If user answers incorrectly 3 times
+                # If 3 incorrect
                 if i == 3:
-                    # Add 1 to the question counter
-                    question = question + 1
-                    # Reset incorrect answer count to 0
+                    # Reset incorrect counter
                     i = 0
-                    # Provide user with correct answer
-                    print(f"{var[0]} + {var[1]} = {var[0]+var[1]}")
-                    break
+                    # Print correct answer
+                    print(f"{questions[_]}{x+y}")
+                    # Move to next question
+                    _ = _ + 1
                 else:
                     pass
-    # Once 10 questions answered, provide correct answer score
+        # If non-int answer
+        except ValueError:
+                # Print error
+                print("EEE")
+                # Add 1 to incorrect counter
+                i = i + 1
+                # If 3 incorrect
+                if i == 3:
+                    # Reset incorrect counter
+                    i = 0
+                    # Print correct answer
+                    print(f"{questions[_]}{x+y}")
+                    # Move to next question
+                    _ = _ + 1
+                else:
+                    pass
+    # Print final score
     print(f"Score: {score}")
 
 # Get level
