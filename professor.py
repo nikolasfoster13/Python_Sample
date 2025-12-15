@@ -1,4 +1,4 @@
-from random import randrange
+from random import randint
 
 def main():
     # Generate level
@@ -7,8 +7,9 @@ def main():
     questions = []
     # Add 10 random questions to list questions
     for _ in range(10):
-        var = generate_integer(level)
-        questions.append(f"{var[0]} + {var[1]} = ")
+        x = generate_integer(level)
+        y = generate_integer(level)
+        questions.append(f"{x} + {y} = ")
     # Set counter to 0
     _ = 0
     # Set incorrect counter to 0
@@ -91,21 +92,22 @@ def generate_integer(level):
         try:
             # If level input = 1, generate 2 random variables between 0-9
             if level == 1:
-                var = [randrange(0,9) for _ in range(2)]
+                x = randint(0,10)
+
                 break
             # If level input = 2, generate 2 random variables between 10-99
             elif level == 2:
-                var = [randrange(10,99) for _ in range(2)]
+                x = randint(10,100)
                 break
             # If level input = 3, generate 2 random variables between 100-999
             elif level == 3:
-                var = [randrange(100,999) for _ in range(2)]
+                x = randint(100,1000)
                 break
             else:
                 raise ValueError
         except ValueError:
             pass
-    return var
+    return x
 
 if __name__ == "__main__":
     main()
