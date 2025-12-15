@@ -1,4 +1,4 @@
-from random import randint
+from random import randrange
 
 def main():
     # Generate level
