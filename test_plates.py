@@ -18,7 +18,7 @@ def test_is_valid_middle_num():
     assert is_valid("AA") == True
 
 def test_is_valid_zero_start():
-    assert is_valid("A0") == False
+    assert is_valid("A02") == False
     assert is_valid("A2") == True
 
 def test_is_valid():
