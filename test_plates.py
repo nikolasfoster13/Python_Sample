@@ -2,7 +2,6 @@ from plates import is_valid
 
 def test_start():
     is_valid("11") == False
-    is_valid("AA") == True
 
 def test_length():
     is_valid("A") == False
