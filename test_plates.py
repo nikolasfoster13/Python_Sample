@@ -19,7 +19,7 @@ def test_is_valid_non_an():
     assert is_valid("AAA") == True
 
 def test_is_valid_middle_num():
-    assert is_valid("A2A") == False
+    assert is_valid("AA2A") == False
     assert is_valid("AA2") == True
 
 def test_is_valid_zero_start():
