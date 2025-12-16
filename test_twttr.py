@@ -32,3 +32,9 @@ def test_twttr_big_u():
 
 def test_twttr_no_v():
     assert twttr.shorten("RTLP") == "RTLP"
+
+def test_twttr_num():
+    assert twttr.shorten("1one") == "1n"
+
+def test_twttr_punct():
+    assert twttr.shorten("Hello!") == "Hll!"
