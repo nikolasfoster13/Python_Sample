@@ -15,5 +15,8 @@ def test_is_valid_non_an():
 def test_is_valid_middle_num():
     is_valid("AA2AA") == False
 
+def test_is_valid_zero_start():
+    is_valid("AA002") == False
+
 def test_is_valid():
     is_valid("AA222") == True
