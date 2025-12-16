@@ -7,6 +7,8 @@ def test_convert():
         convert("cat")
         convert("cat/dog")
         convert("4/1")
+        convert("-3/1")
+        convert("1/-3")
     with pytest.raises(ZeroDivisionError):
         convert("4/0")
     assert convert("1/4") == 25
