@@ -4,11 +4,17 @@ from fuel import convert, gauge
 def test_convert():
     with pytest.raises(ValueError):
         convert("3")
+    with pytest.raises(ValueError):
         convert("cat")
+    with pytest.raises(ValueError):
         convert("cat/dog")
+    with pytest.raises(ValueError):
         convert("4/1")
+    with pytest.raises(ValueError):
         convert("-3/1")
+    with pytest.raises(ValueError):
         convert("1/-3")
+    with pytest.raises(ValueError):
         convert("2.5/4")
     with pytest.raises(ZeroDivisionError):
         convert("4/0")
