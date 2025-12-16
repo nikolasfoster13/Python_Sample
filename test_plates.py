@@ -1,16 +1,14 @@
 from plates import is_valid
 
-def test_is_valid_start():
-    is_valid("23APE") == False
+def test_start():
+    is_valid("111") == False
 
-def test_is_valid_short():
+def test_length():
     is_valid("A") == False
-
-def test_is_valid_long():
-    is_valid("AAAA234") == False
+    is_valid("AAAA234AAAA") == False
 
 def test_is_valid_non_an():
-    is_valid("AA!23") == False
+    is_valid("AA_23") == False
 
 def test_is_valid_middle_num():
     is_valid("AA2AA") == False
