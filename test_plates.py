@@ -12,7 +12,7 @@ def test_length():
     assert is_valid("AAAA") == True
     assert is_valid("AAAAA") == True
     assert is_valid("AAAAAA") == True
-    assert is_valid("AAAAAAA") == True
+    assert is_valid("AAAAAAA") == False
 
 def test_is_valid_non_an():
     assert is_valid("AA!") == False
