@@ -10,6 +10,8 @@ try:
     allowed_types = {"jpg","jpeg","png"}
     if b_file_type.lower() not in allowed_types or a_file_type.lower() not in allowed_types:
         sys.exit("Invalid file type")
+    if b_file_type.lower() != a_file_type.lower():
+        sys.exit("Input and output file types do not match")
     else:
         picture = Image.open(f"{sys.argv[1]}")
         shirt = Image.open("shirt.png")
