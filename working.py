@@ -27,7 +27,7 @@ def convert(s):
         if end_h == "12" and end_tod == "AM":
             end_time = f"00:{end_m}"
         elif end_h == "12" and end_tod == "PM":
-            end_time = f"{end_h}:{start_h}"
+            end_time = f"{end_h}:{end_m}"
         elif end_tod == "AM":
             end_time = f"{end_h}:{end_m}"
         elif end_tod == "PM":

@@ -26,4 +26,6 @@ def test_nonint():
         convert("cat - cat")
     with pytest.raises(ValueError):
         convert("17 PM - 20 PM")
+    with pytest.raises(ValueError):
+        convert("12:60 PM - 4:60 AM")
 
