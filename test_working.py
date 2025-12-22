@@ -20,12 +20,17 @@ def test_nonint():
         convert("cat")
     with pytest.raises(ValueError):
         convert("cat to cat")
+
+def test_wrong_format():
     with pytest.raises(ValueError):
-        convert("12 AM - 8 AM")
+        convert("9 AM - 5 PM")
+
+def test_wrong_hours():
     with pytest.raises(ValueError):
-        convert("cat - cat")
+        convert("20:00 PM - 24:00 PM")
+
+def test_wrong_minutes():
     with pytest.raises(ValueError):
-        convert("17 PM - 20 PM")
-    with pytest.raises(ValueError):
-        convert("12:60 PM - 4:60 AM")
+        convert("8:60 AM to 9:60 AM")
+        
 
