@@ -27,10 +27,10 @@ def test_wrong_format():
 
 def test_wrong_hours():
     with pytest.raises(ValueError):
-        convert("20:00 PM - 24:00 PM")
+        convert("20:00 PM to 24:00 PM")
 
 def test_wrong_minutes():
     with pytest.raises(ValueError):
         convert("8:60 AM to 9:60 AM")
-        
+
 
