@@ -10,11 +10,8 @@ def validate(s):
             return "Invalid"
         else:
             return "Valid"
-    except ValueError:
+    except (ValueError, EmptyValueError):
         return "Invalid"
-    except EmptyValueError:
-        return "Invalid"
-
 if __name__ == "__main__":
     main()
 
