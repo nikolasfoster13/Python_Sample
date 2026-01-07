@@ -45,11 +45,17 @@ class Jar:
 
 
 def main():
+    # Initialize empty jar
     jar = Jar()
+    # Show jar is empty
     print(jar)
+    # Add cookies to jar
     jar.deposit(5)
+    # Show cookies were added
     print(jar)
+    # Withdraw cookies from jar
     jar.withdraw(4)
+    # Show cookies were removed
     print(jar)
 
 if __name__ == "__main__":

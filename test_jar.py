@@ -3,6 +3,7 @@ import pytest
 
 def test_init():
     jar = Jar()
+    assert str(jar) == ""
 
 def test_str():
     jar = Jar()
