@@ -1,3 +1,5 @@
+import sys
+
 class Jar:
     # Initialize jar with capacity 12
     def __init__(self, capacity=12):
@@ -9,17 +11,17 @@ class Jar:
     def __str__(self):
         return "🍪" * self._size
 
-    # If user deposits cookies, add n to size. Do not allow exceed of capacity
+    # If user deposits cookies, add n to size. Dojar not allow exceed of capacity
     def deposit(self, n):
         if self._size + n > self._capacity:
-            raise ValueError
+            raise ValueError("Deposit exceeds capacity")
         else:
             self._size += n
 
     # If user withdraws cookies, subtract n from size. Do not allow past 0
     def withdraw(self, n):
         if n > self._size:
-            raise ValueError
+            raise ValueError("Withdraw exceeds current size")
         else:
             self._size -= n
 
