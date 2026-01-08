@@ -1,0 +1,7 @@
+Installable library colorama is required to run wordle.py.
+This library creates colored and styled terminal text.
+project.py utilizes Style and Fore from colorama.
+Style changes the style of the characters in the string.
+Fore makes characters of a string colored based off provided color name.
+Official documentation can be found at: https://pypi.org/project/colorama/#description
+
