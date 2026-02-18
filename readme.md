@@ -1,0 +1,2 @@
+# Einstein
+einstein.py is a Python program that prompts the user for mass as an integer (in kilograms) and then outputs the equivalent number of Joules as an integer. The program assumes the user input will be an integer.
