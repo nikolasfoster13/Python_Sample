@@ -1,0 +1,2 @@
+# Home Federal Savings Bank
+bank.py is a program that prompts the user for a gretting. If the greeting starts with "hello", the output is "$0". If the greeting starts with "h", but is not "hello", the output is "$20". Otherwise, the output is "$100". The program ignores any leading whitespace in the user's greeting and treats the user's greeting case-insensitively.
