@@ -1,0 +1,2 @@
+# Nutrition Facts
+nutrition.py is a program that prompts consumers users to input a fruit (case-insensitively) and then outputs the number of calories in one portion of that fruit, per the FDA’s poster for fruits. Capitalization aside, the program assumes that users will input fruits exactly as written in the poster (e.g., strawberries, not strawberry). The program ignores any input that isn’t a fruit.
