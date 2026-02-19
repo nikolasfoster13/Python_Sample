@@ -1,0 +1,2 @@
+# camelCase
+camel.py is a program that prompts the user for the name of a variable in camelCase and outputs the corresponding name in snake_case. The program assumes that the user's input will indeed be in camel case.
